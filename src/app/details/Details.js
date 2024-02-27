@@ -13,7 +13,6 @@ const Details = () => {
         .then(response => response.json())
         .then(data => {
           setGame(data)
-          console.log(data)
           })
     }
     getData()
@@ -24,7 +23,7 @@ const Details = () => {
     .then(response => response.json())
     .then(data  => { 
       setPhoto(data.results); 
-      console.log(data)})
+      })
   },[])
   const apiKey = '6baabf7f718d4f7ab760eba791b74404'
 

@@ -20,7 +20,6 @@ const GameApp = () => {
       setList(data.results);
       setNextPage(data.next, window.scrollTo(0, 0))
       setPrevPage(data.previous, window.scrollTo(0, 0))
-      console.log(data)
       })
   },[currentPage])
 
@@ -30,7 +29,8 @@ const GameApp = () => {
       .then(response => response.json())
       .then(data  => { 
         setList(data.results);
-        setCurrentGenre(null)
+        setCurrentGenre(null);
+        setSearch('')
         })
   }
 
@@ -49,6 +49,7 @@ const GameApp = () => {
       setList(data.results);
       })
       setCurrentGenre(genre.name)
+      setSearch('')
     }
 
   const apiKey = '6baabf7f718d4f7ab760eba791b74404'
