@@ -25,7 +25,7 @@ const GameApp = () => {
 
 
   const topHundredClick = () => {
-      fetch(`https://api.rawg.io/api/games?page_size=40&key=${apiKey}`)
+      fetch(`https://api.rawg.io/api/games?page_size=20&key=${apiKey}`)
       .then(response => response.json())
       .then(data  => { 
         setList(data.results);
