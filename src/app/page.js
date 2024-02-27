@@ -24,14 +24,6 @@ const GameApp = () => {
       })
   },[currentPage])
 
-  // const nextClick = () => {
-  //   fetch(`https://api.rawg.io/api/games?key=${apiKey}&page=2&page_size=40`)
-  //   .then(response => response.json())
-  //   .then(data  => { 
-  //     setList(data.results);
-  //     console.log(data)
-  //     })
-  // }
 
   const topHundredClick = () => {
       fetch(`https://api.rawg.io/api/games?page_size=40&key=${apiKey}`)
@@ -92,16 +84,6 @@ const GameApp = () => {
       d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/>
     </svg>&nbsp;
     <input placeholder="Search a game here..." onChange={(e) => handleSearch(setSearch(e.target.value))}  value={search}></input>
-    {/* <button>
-      <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width='13'
-      height='13'
-      viewBox="0 0 512 512">
-        <path 
-        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-        </svg>
-      </button> */}
          </div>
          <div className="top-btn">
          <div className="top100" onClick={topHundredClick}>TOP 100</div>
